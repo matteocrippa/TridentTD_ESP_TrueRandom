@@ -16,7 +16,7 @@ uint32_t TridentTD_ESPRandom::random(){
 
 int TridentTD_ESPRandom::random(uint32_t to_num){
   if(to_num == 0) return this->random();  
-  return  ((to_num)? 1:-1)* this->random() % abs(to_num);
+  return  ((to_num)? 1:-1)* this->random() % std::abs((int)to_num);
 }
 
 int TridentTD_ESPRandom::random(uint32_t from_num, uint32_t to_num){
